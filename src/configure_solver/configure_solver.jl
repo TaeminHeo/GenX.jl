@@ -28,7 +28,8 @@ function configure_solver(solver_settings_path::String, optimizer::Any)
         "cplex" => configure_cplex,
         "clp" => configure_clp,
         "cbc" => configure_cbc,
-        "scip" => configure_scip)
+        "scip" => configure_scip,
+        "ipopt" => configure_ipopt)
 
     return configure_functions[solver_name](path, optimizer)
 end
